@@ -1,12 +1,13 @@
 import { View, Text } from 'react-native'
 import React from 'react'
+import useAuth from '../hooks/useAuth';
 
 const LoginScreen = () => {
   return (
     <View>
-      <Text>clea LoginScreen</Text>
+      <Text>clean LoginScreen</Text>
     </View>
   )
 }
 
-export default LoginScreen
+export default LoginScreen;
