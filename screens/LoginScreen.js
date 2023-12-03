@@ -1,11 +1,12 @@
-import { View, Text } from 'react-native'
+import { View, Text, Button } from 'react-native'
 import React from 'react'
-import useAuth from '../hooks/useAuth';
 
-const LoginScreen = () => {
+const LoginScreen = ({promptAsync}) => {
+  
   return (
-    <View>
+    <View className="flex-1 items-center justify-center">
       <Text>clean LoginScreen</Text>
+      <Button title="Sign in with Google" onPress={() => promptAsync()} />
     </View>
   )
 }

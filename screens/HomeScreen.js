@@ -9,6 +9,7 @@ const HomeScreen = () => {
     <View>
       <Text>clean HomeScreen</Text>
       <Button title="Go to Matched Screen" onPress={() => navigation.navigate('Matched')} />
+      <Button title="Go to Settings" onPress={() => navigation.navigate('Settings')} />
     </View>
   )
 }
