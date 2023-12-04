@@ -28,11 +28,6 @@
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "extra": {
-      "eas": {
-        "projectId": "36a6fb77-803c-443a-8407-f649beb0d1cf"
-      }
-    },
     "scheme": "com.miqqi.grubr"
   }
 }
