@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>184146420212-8952k0qnicc3echedmcd5l2nvn6ob8bi.apps.googleusercontent.com</string>
+	<string>184146420212-ub2t05hp5edre91vj5fm476uh7lbbval.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.184146420212-8952k0qnicc3echedmcd5l2nvn6ob8bi</string>
+	<string>com.googleusercontent.apps.184146420212-ub2t05hp5edre91vj5fm476uh7lbbval</string>
 	<key>API_KEY</key>
 	<string>AIzaSyB2r8nKo1fccVwJt-DaCnYYqA9mhsujyfo</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>host.exp.exponent</string>
+	<string>com.miqqi.grubr</string>
 	<key>PROJECT_ID</key>
 	<string>grubr-43e82</string>
 	<key>STORAGE_BUCKET</key>
@@ -30,5 +30,13 @@
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
 	<string>1:184146420212:ios:677fe9ecd406532c3cd9a1</string>
+	<key>CFBundleURLTypes</key>
+    <array>
+      <dict>
+        <key>CFBundleURLSchemes</key>
+        <array>
+          <string>com.googleusercontent.apps.184146420212-ub2t05hp5edre91vj5fm476uh7lbbval</string>
+          <string>com.miqqi.grubr</string>
+        </array>
 </dict>
 </plist>

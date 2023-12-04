@@ -1,7 +1,7 @@
 import { View, Text, Button, TouchableOpacity, Image, DevSettings } from 'react-native'
-import React, { useLayoutEffect } from 'react'
+import React, { useLayoutEffect, useRef } from 'react'
 import { useNavigation } from '@react-navigation/native'
-import { AntDesign, Entype, Ionicons } from '@expo/vector-icons'
+import { AntDesign, Entypo, Ionicons } from '@expo/vector-icons'
 import { fetchUserInfoAsync } from 'expo-auth-session'
 import useAuth from '../hooks/useAuth'
 import { SafeAreaView } from 'react-native-safe-area-context'
@@ -33,6 +33,7 @@ const DUMMY_DATA = [
 const HomeScreen = () => {
     const navigation = useNavigation();
     const { user } = useAuth();
+    const swipeRef = useRef(null);
 
     useLayoutEffect(() => {
       navigation.setOptions({
@@ -58,12 +59,15 @@ const HomeScreen = () => {
 
       <View className="flex-1 -mt-6">
         <Swiper 
+        ref={swipeRef}
         containerStyle={{backgroundColor: "transparent"}}
           cards={DUMMY_DATA}
           stackSize={5}
           cardIndex={0}
           animateCardOpacity
           verticalSwipe={false}
+          onSwipedLeft={() => {console.log("Swipe PASS");}}
+          onSwipedRight={() => {console.log("Swipe MATCH");}}
           overlayLabels={{
             left: {
               title: "Nah",
@@ -86,7 +90,7 @@ const HomeScreen = () => {
           renderCard={card => (
             <View key={card.id} className="relative bg-white h-3/4 rounded-xl">
               <Image className="absolute top-0 h-full w-full rounded-xl" source={{ uri: card.photoURL }}  />
-              <View className="absolute bottom-0 bg-white w-full flex-row justify-between items-between h-20 px-6 py-2 rounded-b-xl shadow-md">
+              <View className="absolute bottom-0 bg-white w-full flex-row justify-between items-center h-20 px-6 py-2 rounded-b-xl shadow-md">
                 <View>
                   <Text className="text-2xl font-bold">{card.dishName}</Text>
                   <Text>{card.type}</Text>
@@ -98,13 +102,16 @@ const HomeScreen = () => {
         />
       </View>
 
-    </SafeAreaView>
+      <View className="flex flex-row justify-evenly">
+        <TouchableOpacity onPress={() => swipeRef.current.swipeLeft()} className="items-center justify-center rounded-full w-16 h-16 bg-red-200">
+          <Entypo name="cross" size={26} color='red'/>
+        </TouchableOpacity>
 
-    // <View>
-    //   <Text>clean HomeScreen</Text>
-    //   <Button title="Go to Matched Screen" onPress={() => navigation.navigate('Matched')} />
-    //   <Button title="Go to Settings" onPress={() => navigation.navigate('Settings')} />
-    // </View>
+        <TouchableOpacity onPress={() => swipeRef.current.swipeRight()} className="items-center justify-center rounded-full w-16 h-16 bg-green-200">
+          <Entypo name="heart" size={26} color='green'/>
+        </TouchableOpacity>
+      </View>
+    </SafeAreaView>
   )
 }
 

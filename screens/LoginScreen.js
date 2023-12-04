@@ -1,12 +1,13 @@
-import { View, Text, Button } from 'react-native'
+import { View, Text, Button, ImageBackground, TouchableOpacity } from 'react-native'
 import React from 'react'
 
 const LoginScreen = ({promptAsync}) => {
   
   return (
-    <View className="flex-1 items-center justify-center">
-      <Text>clean LoginScreen</Text>
-      <Button title="Sign in with Google" onPress={() => promptAsync()} />
+    <View className="flex-1">
+        <TouchableOpacity className="absolute bottom-40 w-52 pl-12 rounded-2xl mx-20">
+        <Text className="font-semibold text-center" onPress={() => promptAsync()}>Sign in with Google</Text>
+        </TouchableOpacity>
     </View>
   )
 }
