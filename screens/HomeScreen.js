@@ -26,7 +26,7 @@ const HomeScreen = () => {
           <Ionicons name="log-out-outline" size={30} color="#42d0ff" />
         </TouchableOpacity>
 
-        <TouchableOpacity>
+        <TouchableOpacity onPress = {() => navigation.navigate("Filters")}>
           <Image className="w-16 h-16" source={require("../logo.png")} />
         </TouchableOpacity>
 
