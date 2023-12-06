@@ -4,6 +4,8 @@ export const DUMMY_DATA = [
     type: "Chinese cuisine",
     photoURL: "https://houseofnasheats.com/wp-content/uploads/2023/01/Chicken-Fried-Rice-Recipe-12-scaled.jpg",
     id: 1,
+    filter: "Chinese",
+    tag: "Budget-friendly",
     ingredients: [
       "2 cups cooked rice",
       "1 cup diced chicken",
@@ -28,6 +30,8 @@ export const DUMMY_DATA = [
     type: "Italian cuisine",
     photoURL: "https://www.cookingclassy.com/wp-content/uploads/2022/02/pesto-pasta-1.jpg",
     id: 2,
+    filter: "Italian",
+    tag: ["Vegetarian", "Budget-friendly"],
     ingredients: [
       "8 oz pasta",
       "1 cup fresh basil leaves",
@@ -50,6 +54,8 @@ export const DUMMY_DATA = [
     type: "Indonesian cuisine",
     photoURL: "https://dishingouthealth.com/wp-content/uploads/2022/08/CoconutShrimpSkillet_Styled1.jpg",
     id: 3,
+    filter: "Indonesian",
+    tag: "High-protein",
     ingredients: [
       "1 lb shrimp, peeled and deveined",
       "1 can coconut milk",

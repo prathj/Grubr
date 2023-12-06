@@ -39,7 +39,7 @@ const HomeScreen = () => {
   };
 
   return (
-    <SafeAreaView className="flex-1">
+    <SafeAreaView className="flex-1" style={{ paddingBottom: 2 }} >
       <View className="flex-row items-center justify-between px-5">
         <TouchableOpacity onPress={async () => DevSettings.reload()}>
           <Ionicons name="log-out-outline" size={30} color="#42d0ff" />
@@ -55,7 +55,7 @@ const HomeScreen = () => {
       </View>
 
       {showSwiper ? (
-        <View className="flex-1 -mt-6">
+        <View className="flex-1 -mt-8">
           <Swiper
             ref={swipeRef}
             containerStyle={{ backgroundColor: 'transparent' }}
@@ -89,12 +89,22 @@ const HomeScreen = () => {
               },
             }}
             renderCard={(card) => (
-              <View key={card.id} className="relative bg-white h-3/4 rounded-xl">
+              <View key={card.id} className="relative bg-white h-4/5 rounded-xl">
                 <Image className="absolute top-0 h-full w-full rounded-xl" source={{ uri: card.photoURL }} />
                 <View className="absolute bottom-0 bg-white w-full flex-row justify-between items-center h-20 px-6 py-2 rounded-b-xl shadow-md">
                   <View>
                     <Text className="text-2xl font-bold">{card.dishName}</Text>
-                    <Text>{card.type}</Text>
+                    <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                      <Text>{card.type}</Text>
+                      <Text style={{ marginLeft: 5, marginRight: 5 }}>{/* Add space between type and tag */}</Text>
+                      <View style={{ flexDirection: 'row' }}>
+                        {(Array.isArray(card.tag) ? card.tag : [card.tag]).map((tag, index) => (
+                          <View key={index} style={{ backgroundColor: '#F9A825', borderRadius: 999, padding: 5, marginRight: 5 }}>
+                            <Text style={{ color: '#FFFFFF' }}>{tag}</Text>
+                          </View>
+                        ))}
+                      </View>
+                    </View>
                   </View>
                 </View>
               </View>
