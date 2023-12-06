@@ -9,7 +9,7 @@ import { GoogleAuthProvider, onAuthStateChanged, signInWithCredential } from 'fi
 import { auth } from './firebaseConfig';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import LoginScreen from './screens/LoginScreen';
-// import { MatchedProvider } from './MatchedContext';
+import { MatchedProvider } from './MatchedContext';
 
 WebBrowswer.maybeCompleteAuthSession();
 
@@ -43,10 +43,11 @@ export default function App() {
   }, []);
 
   return userInfo ? 
-  ( <NavigationContainer>
-      <AuthProvider>
-        <StackNavigator />
-      </AuthProvider>
-    </NavigationContainer>) : <LoginScreen promptAsync={promptAsync} />
-  ;
+  (<MatchedProvider>
+    <NavigationContainer>
+    <AuthProvider>
+      <StackNavigator />
+    </AuthProvider>
+  </NavigationContainer>
+  </MatchedProvider>) : <LoginScreen promptAsync={promptAsync} />;
 };
