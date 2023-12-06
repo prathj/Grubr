@@ -30,6 +30,7 @@
         <data android:scheme="com.miqqi.grubr"/>
         <data android:scheme="exp"/>
         <data android:scheme="exp://10.3.6.161:8081"/>
+        <data android:scheme="host.expo.exponent"/>
       </intent-filter>
     </activity>
     <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" android:exported="false"/>
