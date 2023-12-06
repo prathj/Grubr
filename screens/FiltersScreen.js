@@ -63,9 +63,9 @@ const FiltersScreen = ({ navigation }) => {
         {renderFilterBox("Mediterranean", "cuisine")}
         {renderFilterBox("Korean", "cuisine")}
         {renderFilterBox("Thai", "cuisine")}
+        {renderFilterBox("Indonesian", "cuisine")}
         {renderFilterBox("Indian", "cuisine")}
         {renderFilterBox("Italian", "cuisine")}
-        {renderFilterBox("Indonesian", "cuisine")}
         {renderFilterBox("American", "cuisine")}
       </View>
 
