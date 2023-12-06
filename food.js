@@ -64,20 +64,19 @@ export const DUMMY_DATA = [
       "Fresh cilantro for garnish",
     ],
     recipeInstructions: [
-      "In a pan, sautÃ© chopped onion until softened.",
+      "In a pan, saute chopped onion until softened.",
       "Add red curry paste and cook for 1-2 minutes.",
       "Add shrimp and cook until pink and opaque.",
       "Stir in coconut milk, chopped tomatoes, fish sauce, and brown sugar. Simmer for 5-7 minutes.",
       "Garnish with fresh cilantro and serve over rice.",
     ],
-  }
+  },
   {
         dishName: "Cheeseburger",
         type: "American cuisine",
         photoURL: "https://peppersandpennies.com/wp-content/uploads/2017/08/PP-20170814-3.jpg",
         id: 4,
-        filter: "American",
-        tag: "High-protein",
+        tags: ["American", "High-protein"],
         ingredients: [
             "1/2 pound medium ground beef",
             "1/2 pound ground pork",
@@ -104,8 +103,7 @@ export const DUMMY_DATA = [
         type: "American cuisine",
         photoURL: "https://www.allrecipes.com/thmb/4NsIWzNOAdTd69ADBr6UFt6W-c8=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/47717-reuben-sandwich-ii-mike-phillips-b77c676e6aaf45e280d34e0c668d8f2f.jpeg",
         id: 5,
-        filter: "American",
-        tag: ["Kosher", "< 1 hour"],
+        tags: ["American", "Kosher", "< 1 hour"],
         ingredients: [
             "2 slices of rye bread",
             "1/2 cup Thousand Island dressing",
@@ -127,8 +125,7 @@ export const DUMMY_DATA = [
         type: "American cuisine",
         photoURL: "https://media.cnn.com/api/v1/images/stellar/prod/170203114440-hot-dog.jpg",
         id: 6,
-        filter: "American",
-        tag: ["Kosher", "Budget-friendly"],
+        tags: ["American", "Kosher", "Budget-friendly"],
         ingredients: [
             "1 hotdog",
             "1 hotdog bun",
@@ -147,8 +144,7 @@ export const DUMMY_DATA = [
         type: "Korean cuisine",
         photoURL: "https://recipetineats.com/wp-content/uploads/2019/05/Bibimbap_3.jpg",
         id: 7,
-        filter: "Korean",
-        tag: "High-protein",
+        tags: ["Korean", "High-protein"],
         ingredients: [
            "Cooked short-grain white rice",
            "1 cup julienned carrots" ,
