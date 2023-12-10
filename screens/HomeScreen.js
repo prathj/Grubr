@@ -15,7 +15,7 @@ const HomeScreen = ({route}) => {
     const swipeRef = useRef(null);
     const { matchedCards, addMatchedCard } = useMatched();
     const [showSwiper, setShowSwiper] = useState(true);
-  
+    
     const { filters } = route.params || { filters: [] };
 
     const applyFilters = (data) => {
@@ -80,7 +80,7 @@ const HomeScreen = ({route}) => {
             ref={swipeRef}
             containerStyle={{ backgroundColor: 'transparent' }}
             cards={filteredAndSortedData}
-            stackSize={5}
+            stackSize={10}
             cardIndex={0}
             animateCardOpacity
             verticalSwipe={false}

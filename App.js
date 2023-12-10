@@ -10,6 +10,9 @@ import { auth } from './firebaseConfig';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import LoginScreen from './screens/LoginScreen';
 import { MatchedProvider } from './MatchedContext';
+import { LogBox } from 'react-native';
+LogBox.ignoreLogs(['Warning: ...']); // Ignore log notification by message
+LogBox.ignoreAllLogs();//Ignore all log notifications
 
 WebBrowswer.maybeCompleteAuthSession();
 
