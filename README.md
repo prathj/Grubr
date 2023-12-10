@@ -7,3 +7,5 @@ Upgrade or add the Expo CLI with the command "npm install --global expo-cli" in 
 If the command npm isn't found, please make sure Node.js is installed on your system from this page: https://nodejs.org/en
 
 Run the app with the command "npx expo start" where you should then be prompted with instructions. Press "i" so it opens the iOS simulator.
+
+Demo of the app: https://drive.google.com/file/d/1qm7U5h9dpMC4Z7DzEzLkkKpUgQ9MYEtu/view?usp=sharing
